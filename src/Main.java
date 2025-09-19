@@ -21,8 +21,7 @@ public class Main {
             if (temperature < 5) {
                 System.out.println("На улице " + temperature +
                         " градуса нужно надеть шапку!");
-            }
-            if (temperature > 5 ) {
+            } else  {
                 System.out.println("На улице " + temperature +
                         " градусов можно идти без шапки!");
             }
@@ -31,15 +30,14 @@ public class Main {
         System.out.println("---------");
         System.out.println("Задача 3:");
         int autoSpeed = 0;
-            if (autoSpeed > 60) {
+            if (autoSpeed >= 60) {
                 System.out.println("Если скорость " + autoSpeed +
                                     ", то придется заплатить штраф");
                 }
-            if (autoSpeed > 0 && autoSpeed < 60) {
+            else if (autoSpeed > 0 && autoSpeed < 60) {
                 System.out.println("Если скорость " + autoSpeed +
                                     ", то вожно сьездить спокойно");
-            }
-            else {
+            } else {
                 System.out.println("Вы стоите на месте!");
             }
 
@@ -67,17 +65,17 @@ public class Main {
     //Задача 5
         System.out.println("---------");
         System.out.println("Задача 5:");
-        int ageBebe = 18;
-        boolean accompaniedAdult = false;
+        int ageBebe = 10;
+        int ageAdult = 18;
             if (ageBebe < 5) {
                 System.out.println("Если возраст ребенка равен " + ageBebe
                                    + " он не может кататься на аттракционе.");
                 }
-            if (ageBebe >= 5 && ageBebe < 14 && true) {
+            if (ageBebe >= 5 && ageBebe < 14 && ageAdult >= 18) {
                 System.out.println("Если возраст ребенка равен " + ageBebe
                         + ", то он может кататься только в сопровождении взрослого.");
                 }
-            else if (ageBebe >= 5 && ageBebe < 14 && false) {
+            else if (ageBebe >= 5 && ageBebe < 14 && ageAdult < 18) {
                 System.out.println("Если возраст ребенка равен " + ageBebe
                         + ", то он не может кататься без сопровождении взрослого.");
                 }
@@ -97,26 +95,21 @@ public class Main {
                 if (passengersSitting > seatingAreas) {
                     System.out.println("Превышение сидячих мест! Срочно решить проблему!");
                     }
-                else {
-                    if (passengersSitting < seatingAreas) {
+                else if (passengersSitting < seatingAreas) {
                         System.out.println("В вагоне есть " + (seatingAreas-passengersSitting)
                                 + " свободных сидячих мест!");
                     } else {
                         System.out.println("В вагоне нет сидячих свободных мест!");
                     }
-                }
 
                 if (passengersPlaces > standingPlaces) {
                     System.out.println("Превышение стоячих мест! Срочно решить проблему!");
-                }
-                else {
-                    if (passengersPlaces < standingPlaces) {
+                } else if (passengersPlaces < standingPlaces) {
                         System.out.println("В вагоне есть " + (standingPlaces - passengersPlaces)
                                 + " свободных стоячих мест!");
                     } else {
                         System.out.println("В вагоне нет стоячих свободных мест!");
                     }
-                }
 
     //Задача 7
         System.out.println("---------");
@@ -126,12 +119,9 @@ public class Main {
             int three = 3;
                 if (one > two && one > three) {
                     System.out.println(one + "самое большое значение!");
-                }
-                else
-                    if (two > one && two > three) {
+                } else if (two > one && two > three) {
                         System.out.println(two + " самое большое значение!");
-                    }
-                    else {
+                    } else {
                         System.out.println(three + " самое большое значение!");
                     }
 
